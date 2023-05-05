@@ -29,7 +29,13 @@ class QuestionController extends Controller
     public function show()
     {
         # code...
-        $data['Questions'] = question::all();
-        return view('welcome', $data);
+
+
+        return view('welcome');
+    }
+    public function questions()
+    {
+        $data['questions'] = question::all();
+        return view('inc.quiz', $data);
     }
 }

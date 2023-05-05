@@ -8,3 +8,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/fetch',[QuestionController::class,'fetchInsert']);
+Route::get('/',[QuestionController::class,'show']);
+Route::get('/questions',[QuestionController::class,'questions']);
